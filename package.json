@@ -1,0 +1,11 @@
+{
+  "name": "khmoon923-blog",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "mkdir -p docs && html-minifier-terser src/index.html -o docs/index.html --collapse-whitespace --remove-comments --minify-css true --minify-js '{\"mangle\":true,\"compress\":true}' && cp -r img docs/ 2>/dev/null; cp favicon.ico docs/ 2>/dev/null; echo 'Build complete → docs/'"
+  },
+  "devDependencies": {
+    "html-minifier-terser": "^7.2.0"
+  }
+}
